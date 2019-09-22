@@ -1,0 +1,19 @@
+	
+	
+	1. VS Code -- https://code.visualstudio.com/download 
+	2. Git --  https://git-scm.com/downloads
+	
+	3. Node JS
+		check node :
+		node -v
+			--- 10.16.3
+		npm -v
+			--- 6.9.0
+	4. install angular CLI
+		npm install -g @angular/cli
+	
+		- Check
+		ng version	
+	5 . follow document 	attached in email
+			
+	

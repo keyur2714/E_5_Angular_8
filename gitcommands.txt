@@ -1,0 +1,12 @@
+
+
+
+git clone https://github.com/keyur2714/E_5_Angular_8.git
+git status
+git add .
+git commit -m"message"
+git push origin master
+git pull -- get latest code
+
+oracle pass : 
+Keyur@java27

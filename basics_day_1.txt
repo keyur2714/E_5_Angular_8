@@ -1,0 +1,33 @@
+
+	cd project	
+	npm cache clean --force
+	npm install
+
+
+	app-root - component
+	
+	0. selector - <component name>
+		
+	1. template - it works as a view
+		component.html
+	2. component - it works as controller
+		component.ts
+	3. css -- it works as a view design
+		component.css
+	4. .spec -- it's for unit testing --
+		component.spec.ts
+	
+	5. module
+		component.module.ts
+	
+
+	1. main.ts
+		- app.module.ts
+			-- bootstrap appcomponent
+	2. insdex.html
+		- use selector app-root
+			
+	
+		
+	
+	

@@ -1,4 +1,4 @@
-	Angular - 7
+	Angular - 8
 
 	Setup   --- Done
 	Git Rpository / Basic Git Commands --- Done

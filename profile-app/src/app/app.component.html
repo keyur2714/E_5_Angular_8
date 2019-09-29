@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+      <h1>{{title}}</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <app-personal-details
+        [color]="'secondary'"
+        [text-color]="'white'"
+      >        
+      </app-personal-details>
+    </div>
+  </div>  
+  <div class="row">
+    <div class="col-sm-6">
+      <app-personal-details
+        [personal-info]="person"
+        [color]="'danger'"
+        [text-color]="'white'"
+      >        
+      </app-personal-details>
+    </div>
+  </div> 
+</div>

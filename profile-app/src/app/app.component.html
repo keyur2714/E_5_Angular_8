@@ -23,4 +23,22 @@
       </app-personal-details>
     </div>
   </div> 
+  <div class="row">
+    <div class="col-sm-6">
+      <app-personal-details
+        [personal-info]="person1"
+        [color]="'dark'"
+        [text-color]="'info'"
+      >
+      </app-personal-details>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+       <app-skill
+        [skillSets]="skills"
+       >         
+       </app-skill>
+    </div>
+  </div>
 </div>

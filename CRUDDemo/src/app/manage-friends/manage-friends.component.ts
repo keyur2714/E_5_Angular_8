@@ -11,7 +11,7 @@ export class ManageFriendsComponent implements OnInit {
   errorMessage : string = '';
   isUpdate : boolean = false;
   updateIdx : number = -1;
-
+  cssClassName : string = 'success';
   friendName : string = 'dravid';
 
   constructor() { }
@@ -41,8 +41,10 @@ export class ManageFriendsComponent implements OnInit {
       this.friendList.push(this.friendName);
       this.friendName = '';
       this.errorMessage = "Friend Created Successfully.";
+      this.cssClassName = 'success';
     }else{
       this.errorMessage = this.friendName+' Already Exists.';
+      this.cssClassName = 'info';
     }
 
     
@@ -62,24 +64,30 @@ export class ManageFriendsComponent implements OnInit {
       this.friendList[this.updateIdx] = this.friendName;
       this.friendName = '';
       this.errorMessage = "Friend List updated successfully.";
+      this.cssClassName = 'info';
+      this.updateIdx = -1;
+      this.isUpdate = false;
     }else{
       this.errorMessage = this.friendName+' Already Exists.';
+      this.cssClassName = 'warning';
     }
   }
 
   checkMandatory() : void {
     if(this.friendName === ''){
       this.errorMessage = 'Friend Name should not be Empty.';
+      this.cssClassName = 'danger';
     }
   }
  
   delete(idx : number) : void {
    // alert(idx);
     let confirmMsg = confirm("Are you sure want to delete "+this.friendList[idx]+" from friend list?");
-   // alert(confirmMsg);
+    alert(confirmMsg);
     if(confirmMsg){
       this.friendList.splice(idx,1);
       this.errorMessage = "Friend deleted successfully.";
+      this.cssClassName = 'danger';
     }
   }
 }

@@ -4,7 +4,7 @@
     </div>
     <div class="card-body">
         <div class="row form-group" *ngIf="errorMessage !== ''">
-            <div class="col alert alert-danger">
+            <div class="col alert alert-{{cssClassName}}">
                 {{errorMessage}}
             </div>
         </div>
@@ -16,7 +16,7 @@
                 <!-- <input type="text" name=name #name class="form-control"/> -->
                 <input type="text" name=name class="form-control" [(ngModel)]="friendName" (blur)="checkMandatory()" />                
 
-                <!-- {{friendName}} -->
+                {{friendName}} 
             </div>
         </div>
         <div class="row form-group">

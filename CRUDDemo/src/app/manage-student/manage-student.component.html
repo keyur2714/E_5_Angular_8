@@ -1,0 +1,68 @@
+<div class="row form-group">
+    <div class="col-sm-4">
+        Roll No:
+    </div>
+    <div class="col-sm-4">
+        <input type="text" name="rollNo" class="form-control" [(ngModel)]="newStudent.rollNo" [readonly]="updateIdx !== -1">
+    </div>
+    {{newStudent.rollNo}}
+</div>
+<div class="row form-group">
+    <div class="col-sm-4">
+        Name:
+    </div>
+    <div class="col-sm-4">
+        <input type="text" name="name" class="form-control" [(ngModel)]="newStudent.name">
+    </div>
+</div>
+<div class="row form-group">
+    <div class="col-sm-4">
+        Mobile No:
+    </div>
+    <div class="col-sm-4">
+        <input type="text" name="mobileNo" class="form-control" [(ngModel)]="newStudent.mobileNo">
+    </div>
+</div>
+<div class="row form-group">
+    <div class="col-sm-4">
+        Email:
+    </div>
+    <div class="col-sm-4">
+        <input type="text" name="email" class="form-control" [(ngModel)]="newStudent.email">
+    </div>
+</div>
+<div class="row form-group">
+    <div class="col-sm-4">
+        <button class="btn btn-info" (click)="save()" *ngIf="updateIdx === -1">Save</button>
+        <button class="btn btn-info" (click)="update()" *ngIf="updateIdx !== -1">Update</button>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header bg-warning">Manage Students</div>
+    <div class="card-body">
+        <table class="table table-bordered bg-dark text-info">
+            <thead>
+                <tr>
+                    <th>Roll No</th>
+                    <th>Name</th>
+                    <th>Mobile No</th>
+                    <th>Email</th>
+                    <th>Action</th>
+                </tr>
+                <tr *ngFor="let student of studentList;let i=index" (click)="setSelectedStudent(student)" [class.selected]="student === selectedStudent">
+                    <td>{{student.rollNo}}</td>
+                    <td>{{student.name}}</td>
+                    <td>{{student.mobileNo}}</td>
+                    <td>{{student.email}}</td>
+                    <td>
+                        <button (click)="edit(i)" class="btn btn-success">Edit</button>
+                    </td>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</div>
+<div>
+    Selected Student is {{selectedStudent.name}}.
+</div>

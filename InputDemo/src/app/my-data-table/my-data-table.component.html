@@ -1,0 +1,14 @@
+<table class="table table-bordered bg-{{bgColor}} text-{{textColor}}">
+        <thead>
+            <tr>
+                <th *ngFor="let header of headerList">{{header}}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let data of dataList">
+                <td *ngFor="let field of fieldList">
+                    {{data[field]}}
+                </td>                
+            </tr>
+        </tbody>
+    </table>

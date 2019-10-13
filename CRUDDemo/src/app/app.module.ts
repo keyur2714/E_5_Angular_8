@@ -4,12 +4,14 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { ManageFriendsComponent } from './manage-friends/manage-friends.component';
 import { ManageStudentComponent } from './manage-student/manage-student.component';
+import { PageNotFoundComponent } from './page-notfound.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ManageFriendsComponent,
-    ManageStudentComponent
+    ManageStudentComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

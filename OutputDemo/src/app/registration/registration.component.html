@@ -1,0 +1,30 @@
+<div class="row form-group">
+    <div class="col">City:</div>
+    <div class="col">
+        <app-my-dropdown
+            [dataList]="cityList"
+            [selectedValue]="cityList[1]"
+            [name]="'city'"
+            (getValue)="getSelectedCity($event)"
+        >            
+        </app-my-dropdown>
+    </div>
+    <div class="col">
+        Selected City is : {{city.desc}}
+    </div>
+</div>
+<div class="row form-group">
+    <div class="col">Course:</div>
+    <div class="col">
+            <app-my-dropdown
+            [dataList]="courseList"
+            [selectedValue]="courseList[1]"
+            [name]="'course'"
+            (getValue)="getSelectedCourse($event)"
+        >            
+        </app-my-dropdown>
+    </div>    
+    <div class="col">
+        Selected Course is : {{course.desc}}
+    </div>
+</div>

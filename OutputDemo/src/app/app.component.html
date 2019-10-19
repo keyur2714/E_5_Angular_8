@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1>{{title}}</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <app-message
+        [message]="msg"
+        (messageEvent)="getMessage($event)"
+      >        
+      </app-message>
+    </div>
+    <div class="col">
+      {{newMessage}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+        <app-registration></app-registration>
+    </div>
+  </div>
+</div>

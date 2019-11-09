@@ -18,7 +18,7 @@
 	Data Binding
 		- one way -- Done
 		- two way -- Done
-	2. Component Communications --
+	2. Component Communications -- 40%
 		- @Input() : Parent to child / property --- Done
 		- @Output() : Child to Parent / Events --- Done
 		- @ViewChild() : Ref of Elements/coponent selectors --- Done

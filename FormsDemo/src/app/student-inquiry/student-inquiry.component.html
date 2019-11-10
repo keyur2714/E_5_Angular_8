@@ -1,0 +1,43 @@
+<form #frm=ngForm (ngSubmit)="save(frm)">
+    <div class="row form-group">
+        <div class="col"><sup>*</sup>Name :</div>
+        <div class="col">
+            <input type="text" class="form-control" name=name ngModel required #name=ngModel/>
+        </div>
+        <div class="col" *ngIf="name.touched && name.invalid" [ngClass]="'error'">
+            Name is required field.
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col"><sup>*</sup>Email :</div>
+        <div class="col">
+            <input type="text" class="form-control" name=email ngModel required #email=ngModel/>
+        </div>
+        <div class="col" *ngIf="email.touched && email.invalid" [ngClass]="'error'">
+            Email is required field.
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col"><sup>*</sup>Mobile No :</div>
+        <div class="col">
+            <input type="text" class="form-control" name=mobileNo ngModel required #mobileNo=ngModel/>
+        </div>
+        <div class="col" *ngIf="mobileNo.touched && mobileNo.invalid" [ngClass]="'error'">
+            Mobile Number is required field.
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col"><sup>*</sup>Course Name :</div>
+        <div class="col">
+            <input type="text" class="form-control" name=courseName ngModel required #courseName=ngModel/>
+        </div>
+        <div class="col" *ngIf="courseName.touched && courseName.invalid" [ngClass]="'error'">
+            Course Name is required field.
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <button class="btn btn-info">Save</button>
+        </div>
+    </div>
+</form>

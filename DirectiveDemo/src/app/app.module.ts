@@ -3,11 +3,15 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { StyleDirective } from './style.directive';
+import { MyIfDirective } from './my-if.directive';
+import { MyForDirective } from './my-for.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    StyleDirective
+    StyleDirective,
+    MyIfDirective,
+    MyForDirective
   ],
   imports: [
     BrowserModule

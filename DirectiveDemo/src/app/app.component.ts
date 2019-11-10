@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'DirectiveDemo';
+
+  loopCnt = 7;
+
+  time : number = 10;
 }

@@ -4,12 +4,17 @@
       {{title}}
     </div>
   </div>
-  <div class="row">
+  <div class="row" *appMyIf="1 === 1;param1:'keyur'">
     <div class="col">
       <h1 appStyle [color]="'blue'">Hello Radhe Krishna...!</h1>
     </div>
-    <div class="col">
+    <div class="col" *appMyFor="5">
       <p appStyle>Hello Radhe Krishna...!</p>
+    </div>
+  </div>
+  <div class="row" *appMyFor="loopCnt">
+    <div class="col">
+      Jay Shree Ram...!
     </div>
   </div>
   <div class="row form-group">
@@ -17,4 +22,16 @@
       <input type="text" class="form-control" appStyle [fontSize]="'25px'" color="green" />
     </div>
   </div>
+  <div class="row">
+    <div class="col">      
+      <span *ngIf="time >= 12;then ifBlock;else elseBlock">
+      </span>      
+    </div>
+  </div>
+  <ng-template #ifBlock [appMyIf]="time >= 12">
+    Good Afternoon...!
+  </ng-template>
+  <ng-template #elseBlock [appMyIf]="time < 12">
+    Good Morning...!
+  </ng-template>
 </div>

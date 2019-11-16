@@ -2,42 +2,99 @@
     <div class="row form-group">
         <div class="col"><sup>*</sup>Name :</div>
         <div class="col">
-            <input type="text" class="form-control" name=name ngModel required #name=ngModel/>
+            <input type="text" class="form-control" name=name [(ngModel)]="student.name" required minlength="3" #name=ngModel/>
         </div>
         <div class="col" *ngIf="name.touched && name.invalid" [ngClass]="'error'">
-            Name is required field.
+            <div *ngIf="name.errors['required']">
+                    Name is required field.
+            </div>
+            <div *ngIf="name.errors['minlength']">
+                    Name is min 3 Charachter.
+            </div>
         </div>
-    </div>
+    </div> 
     <div class="row form-group">
         <div class="col"><sup>*</sup>Email :</div>
         <div class="col">
-            <input type="text" class="form-control" name=email ngModel required #email=ngModel/>
+            <input type="text" class="form-control" name=email [(ngModel)]="student.email" required email #email=ngModel/>
         </div>
-        <div class="col" *ngIf="email.touched && email.invalid" [ngClass]="'error'">
-            Email is required field.
+        <div class="col" *ngIf="email.touched && email.invalid" [ngClass]="'error'">            
+            <div *ngIf="email.errors['required']">
+                    Email is required field.
+            </div>
+            <div *ngIf="email.errors['email']">
+                    Invalid Email Address.
+            </div>
         </div>
     </div>
     <div class="row form-group">
         <div class="col"><sup>*</sup>Mobile No :</div>
         <div class="col">
-            <input type="text" class="form-control" name=mobileNo ngModel required #mobileNo=ngModel/>
+            <input type="text" class="form-control" name=mobileNo [(ngModel)]="student.mobileNo" required minlength="10" maxlength="10" pattern="^[0-9]+$" #mobileNo=ngModel/>
         </div>
         <div class="col" *ngIf="mobileNo.touched && mobileNo.invalid" [ngClass]="'error'">
-            Mobile Number is required field.
+            <div *ngIf="mobileNo.errors['required']">
+                    Mobile Number is required field.
+            </div>
+            <div *ngIf="mobileNo.errors['minlength']">
+                    Mobile Number is 10 Digits.
+            </div>
+            <div *ngIf="mobileNo.errors['pattern']">
+                    Only Digits allowed in Mobile Number.
+            </div>
         </div>
     </div>
     <div class="row form-group">
-        <div class="col"><sup>*</sup>Course Name :</div>
+        <div class="col">Gender :</div>
         <div class="col">
-            <input type="text" class="form-control" name=courseName ngModel required #courseName=ngModel/>
+            <input type="radio" name=gender value="M" [(ngModel)]="student.gender" class="radio-inline"> Male
+            <input type="radio" name=gender value="F" [(ngModel)]="student.gender" class="radio-inline"> FeMale
         </div>
-        <div class="col" *ngIf="courseName.touched && courseName.invalid" [ngClass]="'error'">
-            Course Name is required field.
-        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col"><sup>*</sup>Course :</div>
+        <div class="col">            
+            <select name="course" [(ngModel)]="student.course" #courseName=ngModel class="form-control">
+                <option value="-1">-:Select Course:-</option>
+                <option *ngFor="let course of courseList" [ngValue]="course">
+                    {{course.courseName}}
+                </option>
+            </select>
+        </div>        
     </div>
     <div class="row">
         <div class="col">
-            <button class="btn btn-info">Save</button>
+            <button class="btn btn-info" [disabled]="frm.invalid">Save</button>
         </div>
     </div>
 </form>
+<div class="row" *ngIf="isSubmit">
+    <div class="col">
+        <table class="table table-bordered">
+            <tr>
+                <td>Name</td>
+                <td>{{student.name}}</td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>{{student.email}}</td>
+            </tr>
+            <tr>
+                <td>Mobile No</td>
+                <td>{{student.mobileNo}}</td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td>{{student.gender === 'M' ? 'Male' : 'FeMale'}}</td>
+            </tr>
+            <tr>
+                <td>Course Name</td>
+                <td>{{student.course.courseName}}</td>
+            </tr>
+            <tr>
+                <td>Course Fees</td>
+                <td>{{student.course.fees}}</td>
+            </tr>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+<form [formGroup]="userForm" (ngSubmit)="save()">
+    <div class="row form-group">
+        <div class="col">Name : </div>
+        <div class="col">
+            <input type="text" name=name formControlName="name" class="form-control"/>
+        </div>
+        <div class="col" *ngIf="userForm.get('name').invalid && userForm.get('name').touched">
+            Name is Required Field.
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col">
+            <button class="btn btn-info">Save</button>
+        </div>
+    </div>
+</form>

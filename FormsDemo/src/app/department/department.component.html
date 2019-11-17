@@ -1,0 +1,31 @@
+<form [formGroup]="deptForm" (ngSubmit)="save()">
+    <div class="row form-group">
+        <div class="col-sm-4">
+            Dept Id:
+        </div>
+        <div class="col-sm-4">
+            <input type="text" name=deptId formControlName="deptId" class="form-control">
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col-sm-4">
+            Dept Name:
+        </div>
+        <div class="col-sm-4">
+            <input type="text" name=deptName formControlName="deptName" class="form-control">
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col-sm-4">
+            Dept Head:
+        </div>
+        <div class="col-sm-4">
+            <input type="text" name=deptHead formControlName="deptHead" class="form-control">
+        </div>
+    </div>  
+    <div class="row form-group">
+        <div class="col-sm-4">
+            <button class="btn btn-info">Save</button>
+        </div>
+    </div>  
+</form>

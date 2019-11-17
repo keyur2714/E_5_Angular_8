@@ -1,16 +1,77 @@
 <form [formGroup]="userForm" (ngSubmit)="save()">
     <div class="row form-group">
-        <div class="col">Name : </div>
-        <div class="col">
+        <div class="col-sm-4">Name : </div>
+        <div class="col-sm-4">
             <input type="text" name=name formControlName="name" class="form-control"/>
         </div>
-        <div class="col" *ngIf="userForm.get('name').invalid && userForm.get('name').touched">
-            Name is Required Field.
+        <div class="col-sm-4" *ngIf="userForm.get('name').invalid && userForm.get('name').touched">
+            <div *ngIf="userForm.get('name').errors['required']">
+                    Name is Required Field.
+            </div>
+            <div *ngIf="userForm.get('name').errors['minlength']">
+                    Name is Min 3 Char Required.
+            </div>
         </div>
     </div>
     <div class="row form-group">
-        <div class="col">
-            <button class="btn btn-info">Save</button>
+        <div class="col-sm-4">Email : </div>
+        <div class="col-sm-4">
+            <input type="text" name=email [formControlName]="'email'" class="form-control"/>
+        </div>
+        <div class="col-sm-4" *ngIf="userForm.get('email').invalid && userForm.get('email').touched">
+            <div *ngIf="userForm.get('email').errors['required']">
+                    Email is Required Field.
+            </div>
+            <div *ngIf="userForm.get('email').errors['email']">
+                    Invalid Email Address.
+            </div>
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col-sm-4">Mobile No : </div>
+        <div class="col-sm-4">
+            <input type="text" name=mobileNo [formControlName]="'mobileNo'" class="form-control"/>
+        </div>
+        <div class="col-sm-4" *ngIf="userForm.get('mobileNo').invalid && userForm.get('mobileNo').touched">
+            <div *ngIf="userForm.get('mobileNo').errors['required']">
+                    Mobile Number is Required Field.
+            </div>
+            <div *ngIf="userForm.get('mobileNo').errors['pattern']">
+                    Only Digits Allowed in Mobile Number.
+            </div>
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col-sm-4">Gender : </div>
+        <div class="col-sm-4">
+            <input type="radio" name=gender [formControlName]="'gender'" value="M" class="radio-inline" (change)="updateValidations()" /> Male
+            <input type="radio" name=gender [formControlName]="'gender'" value="F" class="radio-inline" (change)="updateValidations()"/> FeMale
+        </div>        
+    </div>
+    <div class="row form-group">
+        <div class="col-sm-4">Age : </div>
+        <div class="col-sm-4">
+            <input type="text" name=age [formControlName]="'age'" class="form-control"/>
+        </div>        
+    </div>    
+    <div formArrayName="hobbies">
+            <div class="row form-group" *ngFor="let control of userForm.get('hobbies').controls;let i=index;">
+                <div class="col-sm-4">Hobby-{{i+1}} : </div>
+                <div class="col-sm-4">
+                    <input type="text" name="{{i}}" [formControlName]="i" class="form-control"/>
+                </div>        
+                <div class="col-sm-4">
+                    <button class="btn btn-info" (click)="addControl()">Add More</button>
+                </div>
+            </div>
+    </div>
+    <div class="row form-group">
+        <div class="col-sm-4">
+            <button class="btn btn-info m-1">Save</button>
+            <button class="btn btn-secondary m-1" type=button (click)="resetForm()">Reset</button>
         </div>
     </div>
 </form>
+<div *ngIf="isSubmit">
+    {{newUser | json}}
+</div>

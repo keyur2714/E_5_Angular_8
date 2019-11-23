@@ -42,32 +42,32 @@
 	6. DI (Dependency Injection) & Services - Done
 	7. JSON Server - for create dummy web services - Done
 		- How to use POST MAN - Done
-	7. Http Client Module (CRUD) - Done
+	8. Http Client Module (CRUD) - Done
 		- Get
 		- Post
 		- Put
 		- Delete
-	8. Session Storage/Local Storage & Cookie Understanding - Done
-	9. JWT Introduction - Done 
-	10. Interceptor in HttpClientModule with Login Authentication - Done
-	11.Router - For Navigation	- Done
-	12.Route Guards - for Authorizations - Done 
-	13. Custom Modules and it's communications - Done
-	14. Lazy Loading & Eager Loading in Modules - Done
-	15. Pipes - for Data Transform. it's like Filter - Done
+	9. Session Storage/Local Storage & Cookie Understanding - Done
+	10. JWT Introductin - Done 
+	11. Interceptor in HttpClientModule with Login Authentication - Done
+	12.Router - For Navigation	- Done
+	13.Route Guards - for Authorizations - Done 
+	15. Custom Modules and it's communications - Done
+	16. Lazy Loading & Eager Loading in Modules - Done
+	17. Pipes - for Data Transform. it's like Filter - Done
 		- Inbuilt Pipes - Done
 		- Custom Pipes - Done
-	16. Angular Material
+	18. Angular Material
 		- setup	
 		- how to use basic component
 		- DATA Table / Model Dialog / Buttons		
-	17. Animations		
+	19. Animations		
 		- custom Animations
 		- component Animations
-	18. Unit Testing with some Testcases
+	20. Unit Testing with some Testcases
 		- Jasmin
 		- Karma
-	19. E2E Testing Undrestanding
-	20. Basic Usecase Project with Forms Module/Http Client Module/Router and Login authentication & authorization 
-	21. Deployments with some Local Server like Tomcat/WAMP ---- Done
+	21. E2E Testing Undrestanding
+	22. Basic Usecase Project with Forms Module/Http Client Module/Router and Login authentication & authorization 
+	23. Deployments with some Local Server like Tomcat/WAMP ---- Done
 			

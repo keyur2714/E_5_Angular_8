@@ -1,0 +1,55 @@
+<form #frm=ngForm (ngSubmit)="save(frm)">
+    <div class="row form-group">
+        <div class="col-sm-4">Item #: </div>
+        <div class="col-sm-4">
+            <input type="text" name=id [(ngModel)]="newItem.id" class="form-control"/>
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col-sm-4">Item Code: </div>
+        <div class="col-sm-4">
+            <input type="text" name=code [(ngModel)]="newItem.code" class="form-control"/>
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col-sm-4">Item Desc: </div>
+        <div class="col-sm-4">
+            <input type="text" name=description [(ngModel)]="newItem.description" class="form-control"/>
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col-sm-4">Price: </div>
+        <div class="col-sm-4">
+            <input type="text" name=price [(ngModel)]="newItem.price" class="form-control"/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <button class="btn btn-info">Save</button>
+        </div>
+    </div>
+</form>
+
+<div class="card">
+    <div class="card-header bg-warning">
+        Manage Items
+    </div>
+    <div class="card-body">
+        <table class="table table-striped">
+            <tr>
+                <th>Item #</th>
+                <th>Code</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Action</th>
+            </tr>
+            <tr *ngFor="let item of itemList">
+                <td>{{item.id}}</td>
+                <td>{{item.code}}</td>
+                <td>{{item.description}}</td>
+                <td>{{item.price}}</td>
+                <td><button class="btn btn-success" (click)="edit(item.id)">Edit</button></td>
+            </tr>
+        </table>
+    </div>
+</div>

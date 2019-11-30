@@ -1,0 +1,9 @@
+<h1>{{title}}</h1>
+{{seqNum}}
+
+<button (click)="stop()">Stop</button>
+
+<ul *ngFor="let emp of empList">
+  <li>{{emp.id}}</li>
+  <li>{{emp.name}}</li>
+</ul>

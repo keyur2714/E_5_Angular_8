@@ -22,13 +22,13 @@
       "id": 4,
       "code": "TEA",
       "description": "Ginger Tea",
-      "price": 12
+      "price": "15"
     },
     {
       "id": 5,
       "code": "COFFEE",
       "description": "Cold Coffee",
-      "price": 30
+      "price": "40"
     }
   ]
 }

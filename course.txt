@@ -1,7 +1,7 @@
 	Angular - 8
 
 	Setup   --- Done
-	Git Rpository / Basic Git Commands --- Done
+	Git Repository / Basic Git Commands --- Done
 	CLI Basic Commands --- Done
 	First Demo Application  --- Done
 	add bootstrap in demo application --- Done

@@ -1,8 +1,13 @@
+<div class="row alert alert-info" *ngIf="message !== ''">
+    <div class="col">
+        {{message}}
+    </div>
+</div>
 <form #frm=ngForm (ngSubmit)="save(frm)">
     <div class="row form-group">
         <div class="col-sm-4">Item #: </div>
         <div class="col-sm-4">
-            <input type="text" name=id [(ngModel)]="newItem.id" class="form-control"/>
+            <input type="text" name=id [(ngModel)]="newItem.id" class="form-control" [readonly]="isUpdate"/>
         </div>
     </div>
     <div class="row form-group">
@@ -25,7 +30,8 @@
     </div>
     <div class="row">
         <div class="col-sm-4">
-            <button class="btn btn-info">Save</button>
+            <button class="btn btn-info" *ngIf="! isUpdate">Save</button>
+            <button type="button" class="btn btn-info" *ngIf="isUpdate" (click)="update(frm)">Update</button>
         </div>
     </div>
 </form>
@@ -48,7 +54,10 @@
                 <td>{{item.code}}</td>
                 <td>{{item.description}}</td>
                 <td>{{item.price}}</td>
-                <td><button class="btn btn-success" (click)="edit(item.id)">Edit</button></td>
+                <td>
+                    <button class="btn btn-success" (click)="edit(item.id)">Edit</button>
+                    <button class="btn btn-danger" (click)="delete(item.id)">Delete</button>
+                </td>
             </tr>
         </table>
     </div>

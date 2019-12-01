@@ -64,7 +64,7 @@
 	19. Animations		
 		- custom Animations
 		- component Animations
-	20. Unit Testing with some Testcases
+	20. Unit Testing
 		- Jasmin
 		- Karma
 	21. E2E Testing Undrestanding

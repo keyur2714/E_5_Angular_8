@@ -8,19 +8,23 @@
       <a class="nav-link" [routerLink]="'home'" [routerLinkActive]="'selected'">Home</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" [routerLink]="'aboutus'" [routerLinkActive]="'selected'">About Us</a>
+      <a class="nav-link" [routerLink]="'aboutus'" [queryParams]="{companyName:'WebStack',location:'Pune'}" [routerLinkActive]="'selected'">About Us</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" [routerLink]="'contactus'" [routerLinkActive]="'selected'">Contact Us</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="'managework'" [routerLinkActive]="'selected'">Manage Work</a>
     </li>
   </ul>
 </nav>
 <div class="container-fluid">
   <div class="row">
     <div class="col-sm-6">
+        <router-outlet></router-outlet>
     </div>
     <div class="col-sm-6">
-      <router-outlet></router-outlet>
+      
     </div>
   </div>
 </div>

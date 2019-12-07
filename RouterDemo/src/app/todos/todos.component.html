@@ -1,0 +1,22 @@
+<table class="table tabled-bordered bg-dark text-info">
+    <tr>
+        <th>Id</th>
+        <th>Task Name</th>
+        <th>Time</th>
+        <th>Edit</th>
+    </tr>
+    <tr *ngFor="let todo of todosList">
+        <td>
+            <a [routerLink]="['detail',todo.id]" class="btn btn-info">{{todo.id}}</a>
+        </td>
+        <td>{{todo.taskName}}</td>
+        <td>{{todo.time}}</td>
+        <td><button class="btn btn-success" (click)="edit(todo.id)">Edit</button>
+        </td>
+    </tr>
+</table>
+<div class="row">
+    <div class="col">
+        <router-outlet></router-outlet>
+    </div>
+</div>

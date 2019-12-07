@@ -1,0 +1,35 @@
+{
+	"todos" :[
+		{
+			"id" : 1,
+			"taskName" : "Task 1",
+			"time" : "8:00 AM"
+		},
+		{
+			"id" : 2,
+			"taskName" : "Task 2",
+			"time" : "10:00 AM"
+		},
+		{
+			"id" : 3,
+			"taskName" : "Task 3",
+			"time" : "1:00 PM"
+		}
+	],
+	"users" : [
+		{
+			"id" : 1,
+			"userName" : "keyur",
+			"role" : "ADMIN",
+			"password" : "India@27",
+			"token" : "keyurjava27"			
+		},
+		{
+			"id" : 2,
+			"userName" : "denish",
+			"role" : "USER",
+			"password" : "Bharat@26",
+			"token" : "denishjava26"			
+		}
+	]
+}

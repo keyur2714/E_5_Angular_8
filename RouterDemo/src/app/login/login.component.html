@@ -1,1 +1,28 @@
-<p>login works!</p>
+<div class="row form-group" *ngIf="errorMessage !== ''">
+<div class="col-sm-8 alert alert-danger">
+        {{errorMessage}}
+    </div>
+</div>
+<form [formGroup]="loginForm" (ngSubmit)="login()">
+    <div class="row form-group">
+        <div class="col-sm-4">
+            Username : 
+        </div>
+        <div class="col-sm-4">
+            <input type="text" formControlName="userName" name="userName" class="form-control">
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col-sm-4">
+            Password : 
+        </div>
+        <div class="col-sm-4">
+            <input type="password" formControlName="password" name="password" class="form-control">
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col-sm-4">
+            <button class="btn btn-info">Login</button>
+        </div>
+    </div>
+</form>

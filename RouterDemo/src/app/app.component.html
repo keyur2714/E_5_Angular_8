@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-sm bg-info text-white navbar-secondary">
+<nav class="navbar navbar-expand-sm bg-drk text-white navbar-secondary">
   <!-- Brand/logo -->
   <a class="navbar-brand" [routerLink]="'home'">Logo</a>
   
@@ -16,12 +16,18 @@
     <li class="nav-item">
       <a class="nav-link" [routerLink]="'managework'" [routerLinkActive]="'selected'">Manage Work</a>
     </li>
+    <li class="nav-item" *ngIf="! isLoggedIn">
+      <a class="nav-link" [routerLink]="'signin'" [routerLinkActive]="'selected'">Sign In</a>
+    </li>
+    <li class="nav-item" *ngIf="isLoggedIn">
+      <a class="nav-link" [routerLink]="'signout'" [routerLinkActive]="'selected'">Sign Out</a>
+    </li>
   </ul>
 </nav>
 <div class="container-fluid">
   <div class="row">
     <div class="col-sm-6">
-        <router-outlet></router-outlet>
+        <router-outlet (activate)="checkLogin()"></router-outlet>
     </div>
     <div class="col-sm-6">
       

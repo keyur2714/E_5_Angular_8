@@ -48,13 +48,14 @@
 		- Put
 		- Delete
 	9. Session Storage/Local Storage & Cookie Understanding - Done
+	- Object Parsing.
 	10. JWT Introductin - Done 
-	11. Interceptor in HttpClientModule with Login Authentication - Done
+	11. Interceptor in HttpClientModule with Login Authentication -
 	12.Router - For Navigation	- Done
 	13.Route Guards - for Authorizations - Done 
-	15. Custom Modules and it's communications - Done
-	16. Lazy Loading & Eager Loading in Modules - Done
-	17. Pipes - for Data Transform. it's like Filter - Done
+	15. Custom Modules and it's communications -
+	16. Lazy Loading & Eager Loading in Modules - 
+	17. Pipes - for Data Transform. it's like Filter - 
 		- Inbuilt Pipes - Done
 		- Custom Pipes - Done
 	18. Angular Material

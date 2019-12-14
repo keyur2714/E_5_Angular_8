@@ -1,29 +1,24 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactusComponent } from './contactus/contactus.component';
-import { TodosComponent } from './todos/todos.component';
-import { TodoDetailComponent } from './todo-detail/todo-detail.component';
-import { TodoEntryComponent } from './todo-entry/todo-entry.component';
 import { LoginComponent } from './login/login.component';
 import { AuthenticationService } from './auth/authentication.service';
 import { LogoutComponent } from './logout/logout.component';
-import { AuthGuard } from './auth/auth.guard';
+import { TokenInerceptorService } from './token-inerceptor.service';
+import { TodoModule } from './todo/todo.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     AboutusComponent,
-    ContactusComponent,
-    TodosComponent,
-    TodoDetailComponent,
-    TodoEntryComponent,
+    ContactusComponent,    
     LoginComponent,
     LogoutComponent
   ],
@@ -31,12 +26,17 @@ import { AuthGuard } from './auth/auth.guard';
     BrowserModule,
     HttpClientModule,
     ReactiveFormsModule,    
+    TodoModule,
     AppRoutingModule
   ],
   providers: [
-    AuthenticationService,
-    AuthGuard
+    AuthenticationService,    
+    [{provide : HTTP_INTERCEPTORS , useClass : TokenInerceptorService,multi : true}]
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  constructor(){
+    console.log("AppModule Loaded...");
+  }
+}

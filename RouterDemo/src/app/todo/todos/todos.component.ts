@@ -28,7 +28,7 @@ export class TodosComponent implements OnInit {
   }
 
   edit(id : number) : void {    
-    this.router.navigate(['workdetail',id]);
+    this.router.navigate(['/managework/workdetail',id]);
   }
 
 }

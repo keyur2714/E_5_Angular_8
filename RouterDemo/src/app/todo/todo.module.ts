@@ -17,7 +17,7 @@ import { CommonModule } from '@angular/common';
         TodoRoutingModule
     ],
     providers : [
-        AuthGuard
+        
     ]
 })
 export class TodoModule {

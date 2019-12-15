@@ -12,6 +12,7 @@ import { AuthenticationService } from './auth/authentication.service';
 import { LogoutComponent } from './logout/logout.component';
 import { TokenInerceptorService } from './token-inerceptor.service';
 import { TodoModule } from './todo/todo.module';
+import { AuthGuard } from './auth/auth.guard';
 
 @NgModule({
   declarations: [
@@ -26,10 +27,11 @@ import { TodoModule } from './todo/todo.module';
     BrowserModule,
     HttpClientModule,
     ReactiveFormsModule,    
-    TodoModule,
+    //TodoModule,
     AppRoutingModule
   ],
   providers: [
+    AuthGuard,
     AuthenticationService,    
     [{provide : HTTP_INTERCEPTORS , useClass : TokenInerceptorService,multi : true}]
   ],

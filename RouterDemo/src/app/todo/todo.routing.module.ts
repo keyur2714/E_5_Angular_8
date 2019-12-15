@@ -4,12 +4,16 @@ import { TodosComponent } from './todos/todos.component';
 import { TodoDetailComponent } from './todo-detail/todo-detail.component';
 import { AuthGuard } from '../auth/auth.guard';
 const routes: Routes = [
-    {path : 'managework' , component : TodosComponent, canActivate : [AuthGuard],
-    canActivateChild : [AuthGuard],  
+    {path: '', component : TodosComponent,
+    //{path : 'managework' , component : TodosComponent, canActivate : [AuthGuard],      
+    canActivateChild : [AuthGuard],
     children : [
       {
-        path : 'detail/:id' , component : TodoDetailComponent
-      }
+        path : 'detail/:id' , component : TodoDetailComponent,        
+      },
+      // {
+      //   path : 'workdetail/:id' , component : TodoDetailComponent
+      // }
     ]
   },
   {path : 'workdetail/:id' , component : TodoDetailComponent},

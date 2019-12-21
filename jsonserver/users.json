@@ -1,0 +1,25 @@
+{
+	"users" : [
+		{
+			"id" : 1,
+			"name" : "keyur",
+			"email" : "keyurjava27@gmail.com",
+			"mobileNo" : "7387029671",
+			"city" : "surat"
+		},
+		{
+			"id" : 2,
+			"name" : "denish",
+			"email" : "denishjava26@gmail.com",
+			"mobileNo" : "7387029121",
+			"city" : "surat"
+		},
+		{
+			"id" : 3,
+			"name" : "vinit",
+			"email" : "vinitjava24@gmail.com",
+			"mobileNo" : "7387029999",
+			"city" : "bardoli"
+		}
+	]
+}

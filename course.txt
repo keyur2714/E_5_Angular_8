@@ -50,15 +50,15 @@
 	9. Session Storage/Local Storage & Cookie Understanding - Done
 	- Object Parsing.
 	10. JWT Introductin - Done 
-	11. Interceptor in HttpClientModule with Login Authentication -
+	11. Interceptor in HttpClientModule with Login Authentication -Done
 	12.Router - For Navigation	- Done
 	13.Route Guards - for Authorizations - Done 
-	15. Custom Modules and it's communications -
-	16. Lazy Loading & Eager Loading in Modules - 
-	17. Pipes - for Data Transform. it's like Filter - 
+	15. Custom Modules and it's communications - Done
+	16. Lazy Loading & Eager Loading in Modules - Done
+	17. Pipes - for Data Transform. it's like Filter - Done
 		- Inbuilt Pipes - Done
 		- Custom Pipes - Done
-	18. Angular Material
+	18. Angular Material - Done 
 		- setup	
 		- how to use basic component
 		- DATA Table / Model Dialog / Buttons		
@@ -70,5 +70,5 @@
 		- Karma
 	21. E2E Testing Undrestanding
 	22. Basic Usecase Project with Forms Module/Http Client Module/Router and Login authentication & authorization 
-	23. Deployments with some Local Server like Tomcat/WAMP ---- Done
+	23. Deployments with some Local Server like Tomcat/WAMP ----
 			

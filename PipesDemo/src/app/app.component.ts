@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable, interval } from 'rxjs';
+import { TestService } from './test.service';
 
 @Component({
   selector: 'app-root',
@@ -21,6 +22,7 @@ export class AppComponent implements OnInit{
   price : number = 1211;
 
 
+
   accountNo : string = '9898012124';
 
   person = {
@@ -28,11 +30,18 @@ export class AppComponent implements OnInit{
     city : "surat"
   };
 
+  constructor(public testService : TestService){}
+
   ngOnInit(){
     // this.numObservable.subscribe(
     //   (data)=>{
     //     this.num = data;
     //   }
     // )
+    console.log(this.testService.sayHello());
+  }
+
+  sum(num1 : number,num2 : number){
+    return num1+num2;
   }
 }

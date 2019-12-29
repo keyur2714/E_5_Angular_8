@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row form-group">
+    <div class="col">
+      <h1>{{title}}</h1>
+    </div>
+  </div>
+  <div class="row form-group">
+    <div class="col">
+        <button class="btn btn-info" (click)="changeState()">Change State</button>
+    </div>    
+  </div>
+  <div class="row form-group" style="width: 100px;height: 100px;" [@stateTrigger]="state">       
+  </div>
+  <div class="row form-group">
+    <div class="col-sm-3">
+      <table class="table table-bordered">
+        <tr>
+          <th>Name</th>          
+        </tr>
+        <tr *ngFor="let name of friendsList" [@onOff2Trigger]="onOffState">
+          <td>{{name}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div class="row form-group" *ngIf="! isLoaded">
+      <div class="loader"></div>
+  </div>
+</div>
